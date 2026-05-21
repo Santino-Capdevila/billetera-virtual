@@ -1,0 +1,7 @@
+ID:10 | Origen:romeo | Destino:UNIPAGO_ALIAS | Monto:6000.000000 | Fecha:10/12 | Motivo:Nada
+ID:9 | Origen:UNIPAGO_ALIAS | Destino:mateito | Monto:3000.000000 | Fecha:5/12 | Motivo:Gracias
+ID:8 | Origen:UNIPAGO_ALIAS | Destino:Panaderia | Monto:2000.000000 | Fecha:2/12 | Motivo:Pan
+ID:7 | Origen:UNIPAGO_ALIAS | Destino:Ferreteria | Monto:60000.000000 | Fecha:1/12 | Motivo:Gracias
+ID:6 | Origen:Pinoluk | Destino:UNIPAGO_ALIAS | Monto:40000.000000 | Fecha:30/11 | Motivo:Crack
+ID:5 | Origen:UNIPAGO_ALIAS | Destino:faklito | Monto:30000.000000 | Fecha:25/11 | Motivo:Bof
+ID:4 | Origen:Pedromp | Destino:UNIPAGO_ALIAS | Monto:4000.000000 | Fecha:20/11 | Motivo:Gracias

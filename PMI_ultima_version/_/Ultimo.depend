@@ -1,0 +1,121 @@
+# depslib dependency file v1.0
+1762756680 source:c:\users\santino\desktop\pmiiiiiiii\ultimo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MovimientoVO.h"
+	"ContactoListaE.h"
+	"Contacto.h"
+	"Movimiento.h"
+
+1762645254 c:\users\santino\desktop\pmiiiiiiii\ultimo\movimientovo.h
+	"Movimiento.h"
+	"Movimiento.h"
+
+1762680811 c:\users\santino\desktop\pmiiiiiiii\ultimo\movimiento.h
+
+1762645254 c:\users\santino\desktop\pmiiiiiiii\ultimo\contactolistae.h
+	"Contacto.h"
+
+1762645254 c:\users\santino\desktop\pmiiiiiiii\ultimo\contacto.h
+
+1762753839 source:c:\users\santi\onedrive\escritorio\programacion 1\ultimo\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MovimientoVO.h"
+	"ContactoListaE.h"
+	"Contacto.h"
+	"Movimiento.h"
+
+1762634456 c:\users\santi\onedrive\escritorio\programacion 1\ultimo\movimientovo.h
+	"Movimiento.h"
+	"Movimiento.h"
+
+1762670012 c:\users\santi\onedrive\escritorio\programacion 1\ultimo\movimiento.h
+
+1762634456 c:\users\santi\onedrive\escritorio\programacion 1\ultimo\contactolistae.h
+	"Contacto.h"
+
+1762634456 c:\users\santi\onedrive\escritorio\programacion 1\ultimo\contacto.h
+
+1762834466 source:c:\users\santino\downloads\version_fokin_definitiva\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MovimientoVO.h"
+	"ContactoListaE.h"
+	"Contacto.h"
+	"Movimiento.h"
+
+1762634456 c:\users\santino\downloads\version_fokin_definitiva\movimientovo.h
+	"Movimiento.h"
+	"Movimiento.h"
+
+1762670012 c:\users\santino\downloads\version_fokin_definitiva\movimiento.h
+
+1762634456 c:\users\santino\downloads\version_fokin_definitiva\contactolistae.h
+	"Contacto.h"
+
+1762634456 c:\users\santino\downloads\version_fokin_definitiva\contacto.h
+
+1762823992 source:c:\users\santi\downloads\version_fokin_definitiva.3\version_fokin_definitiva\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MovimientoVO.h"
+	"ContactoListaE.h"
+	"Contacto.h"
+	"Movimiento.h"
+
+1762623656 c:\users\santi\downloads\version_fokin_definitiva.3\version_fokin_definitiva\movimientovo.h
+	"Movimiento.h"
+	"Movimiento.h"
+
+1762659212 c:\users\santi\downloads\version_fokin_definitiva.3\version_fokin_definitiva\movimiento.h
+
+1762623656 c:\users\santi\downloads\version_fokin_definitiva.3\version_fokin_definitiva\contactolistae.h
+	"Contacto.h"
+
+1762623656 c:\users\santi\downloads\version_fokin_definitiva.3\version_fokin_definitiva\contacto.h
+
+1762839151 source:c:\users\santi\downloads\version_fokin_definitiva_4\version_fokin_definitiva\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MovimientoVO.h"
+	"ContactoListaE.h"
+	"Contacto.h"
+	"Movimiento.h"
+
+1762840048 c:\users\santi\downloads\version_fokin_definitiva_4\version_fokin_definitiva\movimientovo.h
+	"Movimiento.h"
+	"Movimiento.h"
+
+1762659212 c:\users\santi\downloads\version_fokin_definitiva_4\version_fokin_definitiva\movimiento.h
+
+1762840095 c:\users\santi\downloads\version_fokin_definitiva_4\version_fokin_definitiva\contactolistae.h
+	"Contacto.h"
+
+1762840095 c:\users\santi\downloads\version_fokin_definitiva_4\version_fokin_definitiva\contacto.h
+
+1762839151 source:c:\users\santino\downloads\pmi_ultima_version\_\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"MovimientoVO.h"
+	"ContactoListaE.h"
+	"Contacto.h"
+	"Movimiento.h"
+
+1762889222 c:\users\santino\downloads\pmi_ultima_version\_\movimientovo.h
+	"Movimiento.h"
+	"Movimiento.h"
+
+1762659212 c:\users\santino\downloads\pmi_ultima_version\_\movimiento.h
+
+1762889222 c:\users\santino\downloads\pmi_ultima_version\_\contactolistae.h
+	"Contacto.h"
+
+1763151731 c:\users\santino\downloads\pmi_ultima_version\_\contacto.h
+

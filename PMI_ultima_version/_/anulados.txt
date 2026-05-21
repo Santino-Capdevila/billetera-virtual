@@ -1,0 +1,5 @@
+ID:7 | Fecha:1/12/2025 | Monto:60000.000000 | Origen:UNIPAGO_ALIAS | Destino:Ferreteria | TipoOp:1 TipoMov:3 | Motivo:Gracias
+ID:4 | Fecha:20/11/2025 | Monto:4000.000000 | Origen:Pedromp | Destino:UNIPAGO_ALIAS | TipoOp:2 TipoMov:1 | Motivo:Gracias
+ID:2 | Fecha:14/10/2025 | Monto:351000.000000 | Origen:UNIPAGO_ALIAS | Destino:greimp | TipoOp:1 TipoMov:2 | Motivo:Hola
+ID:10 | Fecha:10/12/2025 | Monto:6000.000000 | Origen:romeo | Destino:UNIPAGO_ALIAS | TipoOp:2 TipoMov:1 | Motivo:Nada
+ID:6 | Fecha:30/11/2025 | Monto:40000.000000 | Origen:Pinoluk | Destino:UNIPAGO_ALIAS | TipoOp:2 TipoMov:2 | Motivo:Crack
