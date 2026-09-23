@@ -1,8 +1,7 @@
 # Billetera Virtual — UNIPAGO
 
-A virtual wallet written in C, built as a university project for
-*Programación y Metodología de la Investigación*, Universidad Nacional de
-San Luis.
+A virtual wallet written in C, built as a university project for *Programación 1*,
+Universidad Nacional de San Luis.
 
 The program manages a single account holder's wallet: a contact book, a
 transaction log kept sorted by date, and a running balance that every
