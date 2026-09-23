@@ -31,7 +31,8 @@ int isFull_lista_movimiento(lista_movimiento lst)
 {
     Nodo *n = (Nodo*)malloc(sizeof(Nodo));
     free(n);
-    return 0;
+    (void)lst;
+    return n == NULL;
 }
 
 void reset_lista_movimiento(lista_movimiento *lst)

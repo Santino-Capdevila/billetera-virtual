@@ -21,12 +21,12 @@ void init(contacto *Contacto)
     (*Contacto).tipo = 0;
 }
 
-void set_nombre(contacto *Contacto, char aux_nombre[])
+void set_nombre(contacto *Contacto, const char aux_nombre[])
 {
     strcpy ((*Contacto).nombre, aux_nombre);
 }
 
-void set_cbu_alias(contacto *Contacto, char aux_cbu_alias[])
+void set_cbu_alias(contacto *Contacto, const char aux_cbu_alias[])
 {
     strcpy ((*Contacto).cbu_alias, aux_cbu_alias);
 }
@@ -41,9 +41,9 @@ char* get_nombre(contacto *Contacto)
 return (*Contacto).nombre;
 }
 
-char* get_cbu_alias(contacto Contacto)
+char* get_cbu_alias(contacto *Contacto)
 {
-return Contacto.cbu_alias;
+return (*Contacto).cbu_alias;
 }
 
 int get_tipo(contacto Contacto)

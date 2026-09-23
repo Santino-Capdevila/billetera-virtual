@@ -420,7 +420,7 @@ int realizar_movimiento(lista_movimiento *movs, Lista_E *contactos)
         printf("Desea ingresar un motivo? (1=si/0=no):");
         ok = scanf("%d",&respuesta);
         getchar();
-        if(!ok || respuesta!= 1 && respuesta!= 0)
+        if(!ok || (respuesta!= 1 && respuesta!= 0))
         {
             printf("Valor invalido.\n");
         }
@@ -444,7 +444,7 @@ int realizar_movimiento(lista_movimiento *movs, Lista_E *contactos)
 
         }
     }
-    while(respuesta !=1 && respuesta !=0 || !ok);
+    while((respuesta !=1 && respuesta !=0) || !ok);
     set_motivo(&m, motivo);
 
 
@@ -510,7 +510,7 @@ int realizar_movimiento(lista_movimiento *movs, Lista_E *contactos)
             while (!isOos_listaE(*contactos))
             {
                 contacto c = copy_listaE(*contactos);
-                if ( strcmp(get_cbu_alias(c), get_cuenta_Destino(&m)) == 0 )
+                if ( strcmp(get_cbu_alias(&c), get_cuenta_Destino(&m)) == 0 )
                 {
                     ya_existe=1;
                     break;
@@ -698,7 +698,7 @@ void modificar_motivo_por_idmov(lista_movimiento *lm, int id_aux)
         printf("Desea eliminar el motivo anterior? (1=si/0=no):\n");
         ok = scanf("%d",&respuesta);
         getchar();
-        if (!ok || respuesta!=1 && respuesta!=0)
+        if (!ok || (respuesta!=1 && respuesta!=0))
         {
             printf("Valor invalido.\n");
         }
@@ -722,7 +722,7 @@ void modificar_motivo_por_idmov(lista_movimiento *lm, int id_aux)
         }
     }
     //Settea el nuevo motivo, suprime de la lista el motivo viejo e inserta el nuevo
-    while(respuesta !=1 && respuesta !=0 || !ok);
+    while((respuesta !=1 && respuesta !=0) || !ok);
     set_motivo(&m, motivo);
     supress_lista_movimiento(lm);
     insertar_ordenado_por_fecha(lm, m);
@@ -744,7 +744,7 @@ void modificar_motivo_por_contacto(lista_movimiento *lm, Lista_E *le, char aux_n
         aux_cont = copy_listaE(*le);
         if(strcmp(get_nombre(&aux_cont),aux_nombre) == 0)
         {
-            strcpy(aux_alias,get_cbu_alias(aux_cont));
+            strcpy(aux_alias,get_cbu_alias(&aux_cont));
             cont = 1;
         }
         forward_listaE(le);
@@ -973,7 +973,7 @@ int rec_mayores_350k(lista_movimiento it, int acum)
         acum = 1;
     }
     forward_lista_movimiento(&it);
-    rec_mayores_350k(it,acum);
+    return rec_mayores_350k(it,acum);
 }
 //Funcion auxiliar de l) para notificar en caso de no encontrar movimientos mayores a 350k
 void mostrar_mayores_350k(lista_movimiento lm)
@@ -1111,7 +1111,7 @@ void cargarContacto(Lista_E *lista)
             while (!isOos_listaE(*lista))
             {
                 aux = copy_listaE(*lista);
-                if (strcmp(get_cbu_alias(aux), cbuAux) == 0)
+                if (strcmp(get_cbu_alias(&aux), cbuAux) == 0)
                 {
                     printf("El alias o CBU ya existe, ingrese otro.\n");
                     repetido = 0;
@@ -1140,6 +1140,30 @@ void cargarContacto(Lista_E *lista)
     return;
 }
 
+//Funcion q)
+void mostrarContactos(Lista_E lista)
+{
+    contacto c;
+    if (isEmpty_listaE(lista))
+    {
+        printf("No hay contactos cargados.\n");
+        return;
+    }
+    reset_listaE(&lista);
+    printf("\n -----LISTA DE CONTACTOS -----\n\n");
+    while(!isOos_listaE(lista))
+    {
+        c = copy_listaE(lista);
+        printf(" Nombre: %s | Alias/CBU: %s | Tipo: ", get_nombre(&c), get_cbu_alias(&c));
+        int t = get_tipo(c);
+        if (t==1) printf("Caja de ahorro $\n");
+        else if (t==2) printf("Cuenta corriente $\n");
+        else printf("Billetera virtual\n");
+        forward_listaE(&lista);
+    }
+    printf("--------------------------------\n");
+}
+
 // Funcion o)
 void eliminarContacto(Lista_E *lista)
 {
@@ -1160,7 +1184,7 @@ void eliminarContacto(Lista_E *lista)
     while(!isOos_listaE(*lista))
     {
         contacto c = copy_listaE(*lista);
-        if ( strcmp(get_nombre(&c), buscado)==0 || strcmp(get_cbu_alias(c), buscado)==0 )
+        if ( strcmp(get_nombre(&c), buscado)==0 || strcmp(get_cbu_alias(&c), buscado)==0 )
         {
             suprimir_listaE(lista);
             printf("Contacto eliminado.\n");
@@ -1188,7 +1212,7 @@ void precargar_contactos(Lista_E *lista)
     while (fscanf(fp,"%39[^,],%39[^,],%d\n", nombre, alias, &tipo) == 3)
     {
 
-        init_listaE(&c);
+        init(&c);
         set_nombre(&c, nombre);
         set_cbu_alias(&c, alias);
         set_tipo(&c, tipo);
@@ -1199,29 +1223,6 @@ void precargar_contactos(Lista_E *lista)
     printf("Contactos precargados correctamente.\n");
 }
 
-//Funcion q)
-void mostrarContactos(Lista_E lista)
-{
-    contacto c;
-    if (isEmpty_listaE(lista))
-    {
-        printf("No hay contactos cargados.\n");
-        return;
-    }
-    reset_listaE(&lista);
-    printf("\n -----LISTA DE CONTACTOS -----\n\n");
-    while(!isOos_listaE(lista))
-    {
-        c = copy_listaE(lista);
-        printf(" Nombre: %s | Alias/CBU: %s | Tipo: ", get_nombre(&c), get_cbu_alias(c));
-        int t = get_tipo(c);
-        if (t==1) printf("Caja de ahorro $\n");
-        else if (t==2) printf("Cuenta corriente $\n");
-        else printf("Billetera virtual\n");
-        forward_listaE(&lista);
-    }
-    printf("--------------------------------\n");
-}
 
 //Funcion r)
 void calcularIngresosYDebitosMes(lista_movimiento lista, int mesBuscado)
@@ -1263,11 +1264,9 @@ void precargar_movimientos(lista_movimiento*lista)
     char cuenta_origen[31],cuenta_destino[31],motivo[101];
     int id,tipo_op,tipo_mov,dia,mes,estado;
     float monto;
-    int max_id = 0;
 
     while (fscanf(fp, "%d,%30[^,],%30[^,],%d,%d,%f,%100[^,],%d,%d,%d\n",&id,cuenta_origen,cuenta_destino,&tipo_op,&tipo_mov,&monto,motivo,&dia,&mes,&estado) == 10)
     {
-        init_lista_movimiento(&m);
         set_id_mov(&m,id);
         set_cuenta_Origen(&m,cuenta_origen);
         set_cuenta_Destino(&m,cuenta_destino);
@@ -1299,7 +1298,6 @@ int main(void)
     lista_movimiento movimientos;
     Lista_E contactosE;
     int opcion;
-    char c;
 
     init_lista_movimiento(&movimientos);
     init_listaE(&contactosE);

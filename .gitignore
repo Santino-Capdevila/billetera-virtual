@@ -1,0 +1,14 @@
+# Compilados
+*.exe
+*.o
+*.obj
+bin/
+obj/
+
+# Cache de Code::Blocks (rutas locales de cada maquina)
+*.depend
+*.layout
+
+# Editores
+.vscode/
+.idea/

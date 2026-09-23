@@ -28,12 +28,12 @@ void set_id_mov(Movimiento *p,int id_mov)
     (*p).id_mov = id_mov;
 }
 
-void set_cuenta_Origen(Movimiento *p,char cuenta_Origen[])
+void set_cuenta_Origen(Movimiento *p,const char cuenta_Origen[])
 {
     strcpy ((*p).cuenta_Origen, cuenta_Origen);
 }
 
-void set_cuenta_Destino(Movimiento *p,char cuenta_Destino[])
+void set_cuenta_Destino(Movimiento *p,const char cuenta_Destino[])
 {
     strcpy ((*p).cuenta_Destino, cuenta_Destino);
 }
@@ -53,7 +53,7 @@ void set_monto(Movimiento *p,float monto)
     (*p).monto = monto;
 }
 
-void set_motivo(Movimiento *p,char motivo[])
+void set_motivo(Movimiento *p,const char motivo[])
 {
     strcpy ((*p).motivo, motivo);
 }
